@@ -13,7 +13,14 @@ public:
     explicit Led(QWidget *parent = nullptr);
     ~Led();
 
-    enum Color {red, green, blue};
+    enum Color {red, green, blue, last};
+
+    bool setColor(int color);
+    int getColor();
+    bool setState(bool state);
+    bool getState();
+    bool setRate(int rate);
+    int getRate();
 
 protected:
     virtual void paintEvent(QPaintEvent* event);
